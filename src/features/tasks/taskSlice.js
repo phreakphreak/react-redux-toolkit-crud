@@ -14,11 +14,8 @@ export const taskSlice = createSlice({
     },
     updateTask: (state, action) => {
       return state.map((task) => {
-        if (task.id === action.payload.id) {
-          task.title = action.payload.title;
-          task.description = action.payload.description;
-        }
-        return task;
+        if (task.id !== action.payload.id) return task;
+        return { ...task, ...action.payload };
       });
     },
   },
