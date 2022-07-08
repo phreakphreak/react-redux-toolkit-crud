@@ -21,7 +21,7 @@ function TaskItem({ title, description, id }) {
 
           <div className="flex flex-row flex-wrap gap-2">
             <DeleteButton onClick={handleDelete} />
-            <EditButton />
+            <EditButton taskId={id} />
           </div>
         </div>
 
