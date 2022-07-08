@@ -10,10 +10,10 @@ export const taskSlice = createSlice({
       state.push(action.payload);
     },
     deleteTask: (state, action) => {
-      state.filter((task) => task.id !== action.payload);
+      return state.filter((task) => task.id !== action.payload);
     },
     updateTask: (state, action) => {
-      state.map((task) => {
+      return state.map((task) => {
         if (task.id === action.payload.id) {
           task.title = action.payload.title;
           task.description = action.payload.description;
