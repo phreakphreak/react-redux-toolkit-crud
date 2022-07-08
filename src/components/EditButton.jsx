@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 function BiPencil(props) {
   return (
     <svg
@@ -23,11 +25,13 @@ function BiPencil(props) {
   );
 }
 
-const EditButton = ({ onClick }) => {
+const EditButton = ({ taskId }) => {
   return (
-    <button className="p-2 text-white bg-blue-500 rounded-md" onClick={onClick}>
-      <BiPencil />
-    </button>
+    <Link to={`/tasks/${taskId}`}>
+      <button className="p-2 text-white bg-blue-500 rounded-md">
+        <BiPencil />
+      </button>
+    </Link>
   );
 };
 
