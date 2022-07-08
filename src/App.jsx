@@ -10,7 +10,10 @@ function App() {
       <Route path="/">
         <TaskView />
       </Route>
-      <Route path="/tasks/add">
+      <Route path="/tasks/:id">
+        {(params) => <TaskForm taskId={params.id} />}
+      </Route>
+      <Route path="/tasks">
         <TaskForm />
       </Route>
     </Container>
