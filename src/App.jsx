@@ -1,5 +1,4 @@
 import { Route } from "wouter";
-import "./App.css";
 import TaskForm from "./components/TaskForm";
 import TaskView from "./components/TaskView";
 import Container from "./components/Container";
